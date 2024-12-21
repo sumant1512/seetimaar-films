@@ -12,6 +12,16 @@ export const routes: Routes = [
       import('./about/about.component').then((m) => m.AboutComponent),
   },
   {
+    path: 'blogs',
+    loadComponent: () =>
+      import('./blogs/blogs.component').then((m) => m.BlogsComponent),
+  },
+  {
+    path: 'blogs/:id',
+    loadComponent: () =>
+      import('./blogs/blog/blog.component').then((m) => m.BlogComponent),
+  },
+  {
     path: 'contact',
     loadComponent: () =>
       import('./contact-us/contact-us.component').then(
