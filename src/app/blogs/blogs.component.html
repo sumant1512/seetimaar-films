@@ -1,0 +1,12 @@
+<div class="container-fluid">
+  <div class="card-columns">
+    <div class="card border-0 mb-3 bg-dark" *ngFor="let blog of blogs">
+      <img [src]="blog.img" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">{{ blog.title }}</h5>
+        <p class="card-text">{{ blog.description }}</p>
+        <a [routerLink]="['/blogs', blog.id]" class="btn btn-primary">View</a>
+      </div>
+    </div>
+  </div>
+</div>

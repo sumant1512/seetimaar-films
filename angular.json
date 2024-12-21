@@ -34,6 +34,9 @@
                 "output": "/"
               }
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/app/scss"]
+            },
             "styles": ["src/styles.scss"],
             "scripts": []
           },
