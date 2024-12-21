@@ -17,7 +17,7 @@ import {
 export class VideoComponent implements AfterViewInit {
   @Input() videoSrc!: string;
   @Input() width: string = '600px';
-  @Input() height = '400px';
+  @Input() height!: string;
   @ViewChild('videoPlayer') videoPlayer!: ElementRef;
 
   ngAfterViewInit() {
@@ -34,7 +34,7 @@ export class VideoComponent implements AfterViewInit {
     videoElement
       .play()
       .then(() => {
-        console.log('Video is playing successfully.');
+        console.log(`${this.videoSrc} video is playing successfully.`);
       })
       .catch((error: any) => {
         console.error('Error attempting to play the video:', error);
