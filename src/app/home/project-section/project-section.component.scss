@@ -1,0 +1,18 @@
+.projects-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  .projects-heading {
+    font-size: 32px;
+    font-weight: 700;
+    font-family: Cinzel;
+  }
+
+  .view {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: Poppins;
+    cursor: pointer;
+  }
+}
