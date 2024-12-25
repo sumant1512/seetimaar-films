@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-about-section',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './about-section.component.html',
-  styleUrl: './about-section.component.scss'
+  styleUrl: './about-section.component.scss',
 })
-export class AboutSectionComponent {
-
-}
+export class AboutSectionComponent {}
