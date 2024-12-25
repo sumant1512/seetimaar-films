@@ -1,0 +1,28 @@
+@import "mq";
+.booking-container {
+  width: 100%;
+  background-image: url("./../../../../public/consultation_bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: brightness(0.5);
+  .book-section {
+    padding: 80px 20px;
+    @include mq(lg) {
+      padding: 80px 200px;
+    }
+  }
+}
+
+.booking-btn {
+  background-color: #ce0000;
+  border: 0;
+}
+
+.booking-heading {
+  color: #ffc107;
+}
+
+p {
+  color: #ffffff;
+}
