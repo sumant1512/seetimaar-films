@@ -1,72 +1,73 @@
-<footer class="container bg-black text-white py-12">
-  <div
-    class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-4 text-center md:text-left"
-  >
-    <!-- Logo Section -->
-    <div>
-      <img
-        src="logo.png"
-        class="w-20 h-20 mx-auto md:text-1xl -top-[1vw] relative"
-      />
-    </div>
-
-    <!--Explore Section-->
-    <div>
-      <h3 class="font-semibold mb-4">Explore</h3>
-      <ul class="space-y-2">
-        <li><a href="#" class="hover:text-gray-400">Home</a></li>
-        <li><a href="#" class="hover:text-gray-400">Projects</a></li>
-        <li><a href="#" class="hover:text-gray-400">Blogs</a></li>
-        <li><a href="#" class="hover:text-gray-400">About Us</a></li>
-        <li><a href="#" class="hover:text-gray-400">Contact Us</a></li>
-      </ul>
-    </div>
-
-    <!-- Resources Section -->
-    <div>
-      <h3 class="font-semibold mb-4">Resources</h3>
-      <ul class="space-y-2">
-        <li><a href="#" class="hover:text-gray-400">Privacy Policy</a></li>
-        <li><a href="#" class="hover:text-gray-400">Terms of Service</a></li>
-        <li><a href="#" class="hover:text-gray-400">Contact Information</a></li>
-        <li>
-          <a href="mailto:Lorem123@example.com" class="hover:text-gray-400"
-            >Email: lorem123&#64;gmail.com</a
+<!-- Footer Section Start -->
+<footer class="container footer-section bg-black text-white py-5">
+  <div class="container">
+    <div class="row text-center text-md-start">
+      <!-- Logo Section -->
+      <div class="col-md-3 mb-4 mb-md-0">
+        <img src="logo.png" class="img-fluid" alt="Logo" />
+      </div>
+      <!-- Explore Section -->
+      <div class="footer-explore col-md-3 mb-4 mb-md-0">
+        <h3 class="footer-heading fw-semibold mb-3">Explore</h3>
+        <ul class="footer-links list-unstyled">
+          <li class="mb-1">
+            <a [routerLink]="''" class="footer-link">Home</a>
+          </li>
+          <li class="mb-1">
+            <a [routerLink]="''" class="footer-link">Projects</a>
+          </li>
+          <li class="mb-1">
+            <a [routerLink]="''" class="footer-link">Blogs</a>
+          </li>
+          <li class="mb-1">
+            <a [routerLink]="''" class="footer-link">About Us</a>
+          </li>
+          <li class="mb-1">
+            <a [routerLink]="''" class="footer-link">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Resources Section -->
+      <div class="footer-resources col-md-3 mb-4 mb-md-0">
+        <h3 class="footer-heading fw-semibold mb-3">Resources</h3>
+        <ul class="footer-links list-unstyled">
+          <li class="mb-1">
+            <a [routerLink]="''" class="footer-link">Privacy Policy</a>
+          </li>
+          <li class="mb-1">
+            <a [routerLink]="''" class="footer-link">Terms of Service</a>
+          </li>
+        </ul>
+        <h3 class="footer-heading fw-semibold mt-4 mb-3">
+          Contact Information
+        </h3>
+        <p class="mb-1">
+          Email:
+          <a href="mailto:chitransh@seetimaarfilms.com" class="footer-link"
+            >chitransh&#64;seetimaarfilms.com</a
           >
-        </li>
-        <li>
+        </p>
+        <p class="mb-1">
           Phone:
-          <a href="tel:+XXXXXXXXXX" class="hover:text-gray-400">+XX XXXXXXXX</a>
-        </li>
-      </ul>
-    </div>
-
-    <!-- Social Media Links -->
-    <div class="flex flex-col items-center md:items-start">
-      <h3 class="font-semibold mb-4">Social Media Links</h3>
-      <div class="flex space-x-4">
-        <a
-          href="#"
-          class="w-8 h-8 bg-gray-600 rounded-xl flex items-center justify-center hover:bg-gray-500"
+          <a href="tel:+91 9993035739" class="footer-link">+91 9993035739</a>
+        </p>
+      </div>
+      <!-- Social Media Links -->
+      <div class="footer-social col-md-3">
+        <h3 class="footer-heading fw-semibold mb-3">Social Media Links</h3>
+        <div
+          class="d-flex justify-content-center justify-content-md-start gap-3"
         >
-          <span class="sr-only">Facebook</span>
-          <img src="facebook.png" alt="Facebook" class="w-4 h-4" />
-        </a>
-        <a
-          href="#"
-          class="w-8 h-8 bg-gray-600 rounded-xl flex items-center justify-center hover:bg-gray-500"
-        >
-          <span class="sr-only">Twitter</span>
-          <img src="twitter.png" alt="Twitter" class="w-4 h-4" />
-        </a>
-        <a
-          href="#"
-          class="w-8 h-8 bg-gray-600 rounded-xl flex items-center justify-center hover:bg-gray-500"
-        >
-          <!-- Replace with an icon -->
-          <span class="sr-only">Instagram</span>
-          <img src="instagram.png" alt="Instagram" class="w-4 h-4" />
-        </a>
+          <a [routerLink]="''">
+            <img src="instagram.png" alt="Instagram" />
+          </a>
+          <a [routerLink]="''">
+            <img src="twitter.png" alt="Twitter" />
+          </a>
+          <a [routerLink]="''">
+            <img src="facebook.png" alt="Facebook" />
+          </a>
+        </div>
       </div>
     </div>
   </div>
