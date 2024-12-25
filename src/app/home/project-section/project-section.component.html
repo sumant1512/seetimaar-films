@@ -7,7 +7,12 @@
 
     <div class="row">
       <div *ngFor="let project of projects" class="col-12 col-md-6">
-        <img class="img-fluid w-100" [src]="project.img" alt="" />
+        <img
+          class="img-fluid w-100 cursor-pointer"
+          [routerLink]="'/projects/' + project.id"
+          [src]="project.img"
+          alt=""
+        />
         <h4 class="my-3 story-heading">{{ project.name }}</h4>
         <p class="story-description">
           {{ project.description }}
