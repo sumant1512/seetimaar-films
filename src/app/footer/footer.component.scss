@@ -1,20 +1,27 @@
-.light-mode {
-  background-color: white;
-  color: black;
-}
-.light-mode footer {
-  background-color: white;
-  color: black;
-}
-.light-mode a {
-  color: black;
-}
-.light-mode a:hover {
-  color: gray;
-}
-.light-mode .bg-gray-600 {
-  background-color: gray;
-}
-.light-mode .bg-gray-600:hover {
-  background-color: lightgray;
+.footer-section {
+  .footer {
+    color: white;
+  }
+
+  .footer-heading {
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-link {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 400;
+    font-family: Poppins;
+  }
+
+  .footer-link:hover {
+    color: #ff6347;
+  }
 }
