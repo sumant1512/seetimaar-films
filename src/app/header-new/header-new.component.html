@@ -4,7 +4,7 @@
 >
   <div class="container-fluid">
     <div class="d-flex justify-content-between">
-      <img class="logo" src="logo.png" alt="Logo" />
+      <img class="logo" [routerLink]="'/'" src="logo.png" alt="Logo" />
 
       <button
         class="navbar-toggler d-lg-none"
@@ -43,7 +43,7 @@
   [attr.data-status]="isScrolled ? 'scrolled' : null"
 >
   <div class="d-flex align-items-center container-large">
-    <img class="logo" src="logo.png" alt="Logo" />
+    <img class="logo" [routerLink]="'/'" src="logo.png" alt="Logo" />
     <button
       class="navbar-toggler d-lg-none"
       type="button"
