@@ -14,9 +14,10 @@
           alt=""
         />
         <h4 class="my-3 story-heading">{{ project.name }}</h4>
-        <p class="story-description">
-          {{ project.description }}
-        </p>
+        <div *ngIf="project.description.length > 150; else fullText">
+          {{ project.description.substring(0, 150) }}...
+        </div>
+        <ng-template #fullText> {{ project.description }} </ng-template>
       </div>
     </div>
   </div>
