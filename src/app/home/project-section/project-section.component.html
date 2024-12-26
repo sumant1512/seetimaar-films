@@ -1,12 +1,12 @@
 <section>
-  <div class="container mb-4 mb-md-5 pb-0 pb-lg-3">
+  <div class="container mb-5 mb-md-5 pb-0 pb-lg-3">
     <div class="projects-section mb-3">
       <h4 class="projects-heading">Projects</h4>
       <p class="view" [routerLink]="'/projects'">View All</p>
     </div>
 
     <div class="row">
-      <div *ngFor="let project of projects" class="col-12 col-md-6">
+      <div *ngFor="let project of projects" class="col-12 col-md-6 mb-4">
         <img
           class="img-fluid w-100 cursor-pointer"
           [routerLink]="'/projects/' + project.id"

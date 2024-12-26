@@ -1,0 +1,26 @@
+<section>
+  <div class="container mb-4 mb-lg-5">
+    <div class="blogs-section mb-3">
+      <h4 class="blogs-heading">Blogs</h4>
+      <p class="view" [routerLink]="'/blogs'">View All</p>
+    </div>
+
+    <div class="row">
+      <div *ngFor="let blog of blogs" class="col-12 col-md-6 col-lg-4 mb-3">
+        <div class="card p-3 blog-card rounded-0">
+          <img [src]="blog.img" class="card-img-top rounded-0" alt="..." />
+          <div class="card-body">
+            <h5 class="blog-title">Seetimaar Films: Lights, Camera, Seeti!</h5>
+            <p class="card-text blog-dscription">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <button [routerLink]="'blogs/' + blog.id" class="b-view">
+              View More
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

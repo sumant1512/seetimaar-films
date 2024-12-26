@@ -1,0 +1,43 @@
+.blogs-section {
+  color: white;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  .blogs-heading {
+    font-size: 32px;
+    font-weight: 700;
+    font-family: Cinzel;
+  }
+
+  .view {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: Poppins;
+    cursor: pointer;
+  }
+}
+
+.blog-title {
+  font-weight: 700;
+  font-family: Poppins;
+}
+
+.blog-dscription {
+  font-weight: 400;
+  font-family: "Open Sans";
+}
+
+.blog-card {
+  background-color: #000;
+  color: #fff;
+  border-color: #f5f5f5;
+}
+
+.b-view {
+  padding: 12px 16px;
+  background-color: #ce0000;
+  border: none;
+  color: white;
+}
