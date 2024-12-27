@@ -6,7 +6,7 @@
       <h1 class="mb-4 booking-heading">
         Let's bring your vision to life together.
       </h1>
-      <p>
+      <p class="booking-description">
         Seetimaar Films isn't just ambitious; it's a mission. A mission to give
         writers the spotlight they deserve, actors the stage to shine, and
         everyone working behind the camera the standing ovation they've always
@@ -14,9 +14,124 @@
         script would just be a Word document.
       </p>
 
-      <button class="b-consultation mt-3" [routerLink]="'/contact'">
+      <button
+        class="b-consultation mt-3"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
         Book a consultation
       </button>
     </div>
   </div>
 </section>
+
+<!-- Modal -->
+<!-- <div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">...</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content rounded-0">
+      <form class="row g-10 contact-container rounded-0">
+        <h1 class="contact-heading mb-5 mt-3">CONTACT US</h1>
+        <div class="col-12 col-md-6 mb-3">
+          <label for="text" class="form-label contact-text">Name*</label>
+          <input
+            type="text"
+            class="border-0 rounded-0 contact-input-field w-100"
+            id="inputName"
+            placeholder="Name"
+          />
+        </div>
+        <div class="col-12 col-md-6 mb-3">
+          <label for="inputEmail4" class="form-label contact-text">Email</label>
+          <input
+            type="email"
+            class="rounded-0 border-0 contact-input-field w-100"
+            id="inputEmail4"
+            placeholder="Email"
+          />
+        </div>
+        <div class="col-12 col-md-6 mb-3">
+          <label for="inputPhone" class="form-label contact-text"
+            >Phone Number*</label
+          >
+          <input
+            type="tel"
+            class="rounded-0 border-0 contact-input-field w-100"
+            id="inputPhone"
+            placeholder="123-456-7890"
+          />
+        </div>
+        <div class="col-12 col-md-6 mb-3">
+          <label for="inputEnquiry" class="form-label contact-text"
+            >Purpose of Enquiry</label
+          >
+          <select
+            id="inputEnquiry"
+            class="rounded-0 border-0 contact-input-field custom-dropdown w-100"
+            placeholder="Purpose of Enquiry"
+          >
+            <option value="" disabled selected>Select an option</option>
+            <option>General Inquiry</option>
+            <option>Support</option>
+            <option>Question</option>
+            <option>Feedback</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="col-12">
+          <label for="message" class="form-label contact-text">Message</label>
+          <textarea
+            class="contact-msg-box rounded-0 border-0 w-100"
+            id="message"
+            rows="4"
+            placeholder="Your message here..."
+          ></textarea>
+        </div>
+        <div class="col-12 text-center mt-5">
+          <button
+            type="submit"
+            class="rounded-0 border-0 sign-in-btn btn-primary"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
