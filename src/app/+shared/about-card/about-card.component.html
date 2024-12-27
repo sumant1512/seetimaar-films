@@ -1,0 +1,30 @@
+<div class="row align-items-center">
+  <div
+    class="col-12 col-md-4"
+    [ngClass]="{
+      'order-md-2': aboutData.isSwapped,
+      'order-md-1': !aboutData.isSwapped
+    }"
+  >
+    <img class="img-fluid" [src]="aboutData.img" [alt]="aboutData.imgAlt" />
+  </div>
+  <div
+    class="col-12 col-md-8 about-card"
+    [ngClass]="{
+      'order-md-1': aboutData.isSwapped,
+      'order-md-2': !aboutData.isSwapped
+    }"
+  >
+    <h1 class="name">{{ aboutData.name }}</h1>
+    <p *ngFor="let bio of aboutData.bio" class="bio">
+      {{ bio }}
+    </p>
+    <button
+      class="b-read mt-4"
+      *ngIf="aboutData.isReadBtnActive"
+      [routerLink]="'/about'"
+    >
+      Read More
+    </button>
+  </div>
+</div>
