@@ -65,71 +65,83 @@
 >
   <div class="modal-dialog modal-lg">
     <div class="modal-content rounded-0">
-      <form class="row g-10 contact-container rounded-0">
-        <h1 class="contact-heading mb-5 mt-3">CONTACT US</h1>
-        <div class="col-12 col-md-6 mb-3">
-          <label for="text" class="form-label contact-text">Name*</label>
-          <input
-            type="text"
-            class="border-0 rounded-0 contact-input-field w-100"
-            id="inputName"
-            placeholder="Name"
-          />
-        </div>
-        <div class="col-12 col-md-6 mb-3">
-          <label for="inputEmail4" class="form-label contact-text">Email</label>
-          <input
-            type="email"
-            class="rounded-0 border-0 contact-input-field w-100"
-            id="inputEmail4"
-            placeholder="Email"
-          />
-        </div>
-        <div class="col-12 col-md-6 mb-3">
-          <label for="inputPhone" class="form-label contact-text"
-            >Phone Number*</label
-          >
-          <input
-            type="tel"
-            class="rounded-0 border-0 contact-input-field w-100"
-            id="inputPhone"
-            placeholder="123-456-7890"
-          />
-        </div>
-        <div class="col-12 col-md-6 mb-3">
-          <label for="inputEnquiry" class="form-label contact-text"
-            >Purpose of Enquiry</label
-          >
-          <select
-            id="inputEnquiry"
-            class="rounded-0 border-0 contact-input-field custom-dropdown w-100"
-            placeholder="Purpose of Enquiry"
-          >
-            <option value="" disabled selected>Select an option</option>
-            <option>General Inquiry</option>
-            <option>Support</option>
-            <option>Question</option>
-            <option>Feedback</option>
-            <option>Other</option>
-          </select>
-        </div>
-
-        <div class="col-12">
-          <label for="message" class="form-label contact-text">Message</label>
-          <textarea
-            class="contact-msg-box rounded-0 border-0 w-100"
-            id="message"
-            rows="4"
-            placeholder="Your message here..."
-          ></textarea>
-        </div>
-        <div class="col-12 text-center mt-5">
+      <form class="g-10 contact-container rounded-0">
+        <div class="d-flex justify-content-between align-items-baseline">
+          <h1 class="contact-heading mb-5 mt-3">CONTACT US</h1>
           <button
-            type="submit"
-            class="rounded-0 border-0 sign-in-btn btn-primary"
-          >
-            Submit
-          </button>
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-6 mb-3">
+            <label for="text" class="form-label contact-text">Name*</label>
+            <input
+              type="text"
+              class="border-0 rounded-0 contact-input-field w-100"
+              id="inputName"
+              placeholder="Name"
+            />
+          </div>
+          <div class="col-12 col-md-6 mb-3">
+            <label for="inputEmail4" class="form-label contact-text"
+              >Email</label
+            >
+            <input
+              type="email"
+              class="rounded-0 border-0 contact-input-field w-100"
+              id="inputEmail4"
+              placeholder="Email"
+            />
+          </div>
+          <div class="col-12 col-md-6 mb-3">
+            <label for="inputPhone" class="form-label contact-text"
+              >Phone Number*</label
+            >
+            <input
+              type="tel"
+              class="rounded-0 border-0 contact-input-field w-100"
+              id="inputPhone"
+              placeholder="123-456-7890"
+            />
+          </div>
+          <div class="col-12 col-md-6 mb-3">
+            <label for="inputEnquiry" class="form-label contact-text"
+              >Purpose of Enquiry</label
+            >
+            <select
+              id="inputEnquiry"
+              class="rounded-0 border-0 contact-input-field custom-dropdown w-100"
+              placeholder="Purpose of Enquiry"
+            >
+              <option value="" disabled selected>Select an option</option>
+              <option>General Inquiry</option>
+              <option>Support</option>
+              <option>Question</option>
+              <option>Feedback</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="col-12">
+            <label for="message" class="form-label contact-text">Message</label>
+            <textarea
+              class="contact-msg-box rounded-0 border-0 w-100"
+              id="message"
+              rows="4"
+              placeholder="Your message here..."
+            ></textarea>
+          </div>
+          <div class="col-12 text-center mt-5">
+            <button
+              type="submit"
+              class="rounded-0 border-0 sign-in-btn btn-primary"
+            >
+              Submit
+            </button>
+          </div>
         </div>
       </form>
     </div>
