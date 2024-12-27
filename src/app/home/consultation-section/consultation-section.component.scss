@@ -24,6 +24,76 @@
   color: #ffc107;
 }
 
-p {
+.booking-description {
   color: #ffffff;
 }
+
+// modal code start
+
+.contact-container {
+  max-width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.contact-heading {
+  font-weight: 700;
+  font-size: 32px;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.contact-text {
+  color: black;
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.contact-input-field {
+  width: 310px;
+  height: 48px;
+  display: block;
+  padding: 12px;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.custom-dropdown {
+  appearance: none;
+  padding-right: 32px;
+  background-image: url("./../../../../public/angle-down.png");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 10.4px;
+}
+
+.contact-msg-box {
+  /* width: 100%; */
+  padding: 12px;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: #f0f0f0;
+  box-sizing: border-box;
+  resize: vertical;
+  min-height: 150px;
+}
+
+.sign-in-btn {
+  padding: 12px 24px;
+  background-color: #ce0000;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+}
+
+.sign-in-btn:hover {
+  background-color: #b30000;
+}
+
+//modal code end
