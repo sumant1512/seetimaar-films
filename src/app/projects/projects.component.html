@@ -1,13 +1,42 @@
-<p>projects works!</p>
-<p>projects works!</p>
-<p>projects works!</p>
-<p>projects works!</p>
-<p>projects works!</p>
-<p>projects works!</p>
-<p>projects works!</p>
-<p>projects works!</p>
-<p>projects works!</p>
-<p>projects works!</p>
-<p>projects works!</p>
-<p>projects works!</p>
-<p>projects works!</p>
+<div class="container project-container">
+  <div class="banner">
+    <div class="project-details">
+      <div class="d-flex align-items-center mb-2">
+        <h1 class="name">{{ projects[0].name }}</h1>
+        <button class="b-new px-2 px-md-3">New Story</button>
+      </div>
+      <p class="description">
+        {{ projects[0].description }}
+      </p>
+    </div>
+  </div>
+
+  <div class="card-column my-5">
+    <div
+      [ngClass]="{ 'selected-tab': tab === selectedTab }"
+      class="cursor-pointer pb-3 text-center"
+      *ngFor="let tab of tabs"
+      (click)="selectTab(tab)"
+    >
+      {{ tab }}
+    </div>
+  </div>
+
+  <div class="row">
+    <ng-container *ngFor="let project of projects">
+      <div *ngIf="!project.isLatest" class="col-12 col-md-6 mb-4">
+        <img
+          class="img-fluid w-100 cursor-pointer"
+          [routerLink]="'/projects/' + project.id"
+          [src]="project.img"
+          alt=""
+        />
+        <h4 class="my-3 story-heading">{{ project.name }}</h4>
+        <div *ngIf="project.description.length > 100; else fullText">
+          {{ project.description.substring(0, 100) }}...
+        </div>
+        <ng-template #fullText>{{ project.description }}</ng-template>
+      </div>
+    </ng-container>
+  </div>
+</div>

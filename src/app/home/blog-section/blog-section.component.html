@@ -11,10 +11,12 @@
           <img [src]="blog.img" class="card-img-top rounded-0" alt="..." />
           <div class="card-body">
             <h5 class="blog-title">Seetimaar Films: Lights, Camera, Seeti!</h5>
-            <p class="card-text blog-dscription">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+            <div class="blog-dscription mb-4">
+              <div *ngIf="blog.description.length > 100; else fullText">
+                {{ blog.description.substring(0, 100) }}...
+              </div>
+              <ng-template #fullText> {{ blog.description }} </ng-template>
+            </div>
             <button [routerLink]="'blogs/' + blog.id" class="b-view">
               View More
             </button>
