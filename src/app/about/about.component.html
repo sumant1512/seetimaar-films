@@ -1,2 +1,8 @@
-<app-video [videoSrc]="'guns_valley.mp4'" [width]="'100%'"></app-video>
-<h1>About page loaded</h1>
+<section>
+  <div
+    class="container about-container mt-0 mt-md-5 mt-lg-0 mb-4 mb-md-5 pb-0 pb-lg-3"
+  >
+    <app-about-card [aboutData]="chitranshAbout"></app-about-card>
+    <app-about-card [aboutData]="otherAbout"></app-about-card>
+  </div>
+</section>
