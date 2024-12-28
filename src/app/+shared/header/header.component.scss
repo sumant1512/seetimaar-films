@@ -1,34 +1,41 @@
+@import "mq";
+
 .header {
-  background: #2f2e2e;
+  background: black;
   color: #a3a3a3;
-  width: 90%;
-  border-radius: 30px;
+  width: 100%;
   position: fixed;
-  left: 50%;
-  top: 16%;
-  transform: translate(-50%, -50%);
   transition: all 0.25s ease-in-out;
-  box-sizing: content-box;
-  box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 20px 20px;
   z-index: 9;
 }
 
+.contact-btn {
+  min-width: 122px;
+  background-color: #ce0000;
+  color: white;
+  padding: 7px 16px 8px 16px;
+  border: none;
+}
+
+.container-large {
+  padding-left: 166px;
+}
+
 .header[data-status="scrolled"] {
   top: 0;
-  transform: translate(-50%, 0);
-  width: 96%;
+  width: 100%;
 }
 
 .header .logo {
   color: #a3a3a3;
-  font-weight: 700;
-  font-size: 24px;
   transition: font-size 0.25s ease-in-out;
   cursor: pointer;
+  @include mq(lg) {
+    position: fixed;
+    top: 20px;
+    left: 40px;
+  }
 }
 
 .header-nav {
@@ -43,14 +50,13 @@
   display: inline-block;
 }
 
-.header-nav .nav-link {
+.nav-link {
   text-decoration: none;
   display: block;
-  color: #a3a3a3;
-  font-weight: 500;
-  font-size: 18px;
-  padding: 0px 20px;
-  transition: font-size 1s ease-in-out;
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: Poppins;
   cursor: pointer;
 }
 
