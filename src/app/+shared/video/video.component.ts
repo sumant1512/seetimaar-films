@@ -29,7 +29,7 @@ export class VideoComponent implements AfterViewInit {
 
     videoElement.muted = true;
     videoElement.autoplay = true;
-    videoElement.loop = true;
+    // videoElement.loop = true;
 
     videoElement
       .play()
