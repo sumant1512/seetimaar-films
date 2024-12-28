@@ -1,48 +1,37 @@
 <div class="container project-container">
   <!-- Banner Section -->
-  <div
-    class="banner"
-    [ngStyle]="{ 'background-image': 'url(' + selectedProject.img + ')' }"
-  >
+  <div class="banner">
+    <app-video [videoSrc]="selectedProject.video" [width]="'100%'"></app-video>
     <div class="project-details">
       <div class="d-flex align-items-center mb-2">
         <h1 class="name">{{ selectedProject.name }}</h1>
         <button *ngIf="selectedProject.isLatest" class="b-new px-2 px-md-3">
-          New Story
+          New
         </button>
       </div>
       <p class="description">
-        {{ selectedProject.description }}
+        {{ selectedProject.oneLiner }}
       </p>
     </div>
   </div>
 
-  <!-- Tabs Section -->
-  <div class="card-column my-5">
-    <div
-      [ngClass]="{ 'selected-tab': tab === selectedTab }"
-      class="cursor-pointer pb-3 text-center"
-      *ngFor="let tab of tabs"
-      (click)="selectTab(tab)"
-    >
-      {{ tab }}
-    </div>
-  </div>
-
   <!-- Projects Section -->
+  <h4 class="projects-heading mb-3 mt-5">Related Projects</h4>
   <div class="project-cards">
-    <div class="story-card mb-4" *ngFor="let project of getFilteredProjects()">
-      <img
-        class="img-fluid w-100 cursor-pointer"
-        [src]="project.img"
-        alt=""
-        (click)="selectProject(project)"
-      />
+    <div
+      class="story-card mb-4 cursor-pointer"
+      *ngFor="let project of getFilteredProjects()"
+      (click)="selectProject(project)"
+    >
+      <app-video-gif-player
+        [videoSrc]="project.video"
+        [width]="'100%'"
+      ></app-video-gif-player>
       <h4 class="my-3 story-heading">{{ project.name }}</h4>
-      <div *ngIf="project.description.length > 100; else fullText">
-        {{ project.description.substring(0, 100) }}...
+      <div *ngIf="project.oneLiner.length > 100; else fullText">
+        {{ project.oneLiner.substring(0, 100) }}...
       </div>
-      <ng-template #fullText>{{ project.description }}</ng-template>
+      <ng-template #fullText>{{ project.oneLiner }}</ng-template>
     </div>
   </div>
 
