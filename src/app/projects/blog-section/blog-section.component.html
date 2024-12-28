@@ -1,0 +1,27 @@
+<section>
+  <div class="container mb-4 mb-lg-5">
+    <div class="mt-5 mb-3">
+      <h4 class="blogs-heading">Related Blogs</h4>
+    </div>
+
+    <div class="row">
+      <div *ngFor="let blog of blogs" class="col-12 col-md-6 col-lg-4 mb-3">
+        <div class="card p-3 blog-card rounded-0">
+          <img [src]="blog.img" class="card-img-top rounded-0" alt="..." />
+          <div class="card-body">
+            <h5 class="blog-title">Seetimaar Films: Lights, Camera, Seeti!</h5>
+            <div class="blog-dscription mb-4">
+              <div *ngIf="blog.description.length > 100; else fullText">
+                {{ blog.description.substring(0, 100) }}...
+              </div>
+              <ng-template #fullText> {{ blog.description }} </ng-template>
+            </div>
+            <button [routerLink]="'blogs/' + blog.id" class="red-btn">
+              View More
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

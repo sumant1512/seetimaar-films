@@ -7,17 +7,15 @@
 
     <div class="row">
       <div *ngFor="let project of projects" class="col-12 col-md-6 mb-4">
-        <img
-          class="img-fluid w-100 cursor-pointer"
-          [routerLink]="'/projects/' + project.id"
-          [src]="project.img"
-          alt=""
-        />
+        <app-video-gif-player
+          [videoSrc]="project.video"
+          [width]="'100%'"
+        ></app-video-gif-player>
         <h4 class="my-3 story-heading">{{ project.name }}</h4>
-        <div *ngIf="project.description.length > 150; else fullText">
-          {{ project.description.substring(0, 150) }}...
+        <div *ngIf="project.oneLiner.length > 150; else fullText">
+          {{ project.oneLiner.substring(0, 150) }}...
         </div>
-        <ng-template #fullText> {{ project.description }} </ng-template>
+        <ng-template #fullText> {{ project.oneLiner }} </ng-template>
       </div>
     </div>
   </div>
