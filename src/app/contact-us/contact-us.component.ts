@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { VideoComponent } from '../video/video.component';
+import { VideoComponent } from '../+shared/video/video.component';
 
 @Component({
   selector: 'app-contact-us',

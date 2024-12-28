@@ -1,0 +1,9 @@
+<video
+  #videoPlayer
+  [ngStyle]="{ width: width, height: height }"
+  (mouseenter)="playVideo()"
+  (mouseleave)="pauseVideo()"
+>
+  <source [src]="videoSrc" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>

@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { BlogSectionComponent } from './blog-section/blog-section.component';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, BlogSectionComponent],
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss'], // Fixed typo: styleUrl -> styleUrls
 })

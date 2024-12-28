@@ -15,7 +15,7 @@
       </p>
 
       <button
-        class="b-consultation mt-3"
+        class="red-btn mt-3"
         data-bs-toggle="modal"
         data-bs-target="#exampleModal"
       >
@@ -65,7 +65,7 @@
 >
   <div class="modal-dialog modal-lg">
     <div class="modal-content rounded-0">
-      <form class="g-10 contact-container rounded-0">
+      <form class="py-3 py-md-5 px-3 px-md-5 rounded-0">
         <div class="d-flex justify-content-between align-items-baseline">
           <h1 class="contact-heading mb-5 mt-3">CONTACT US</h1>
           <button
@@ -77,7 +77,7 @@
         </div>
         <div class="row">
           <div class="col-12 col-md-6 mb-3">
-            <label for="text" class="form-label contact-text">Name*</label>
+            <label for="text" class="form-label f-label">Name*</label>
             <input
               type="text"
               class="border-0 rounded-0 contact-input-field w-100"
@@ -86,9 +86,7 @@
             />
           </div>
           <div class="col-12 col-md-6 mb-3">
-            <label for="inputEmail4" class="form-label contact-text"
-              >Email</label
-            >
+            <label for="inputEmail4" class="form-label f-label">Email</label>
             <input
               type="email"
               class="rounded-0 border-0 contact-input-field w-100"
@@ -97,7 +95,7 @@
             />
           </div>
           <div class="col-12 col-md-6 mb-3">
-            <label for="inputPhone" class="form-label contact-text"
+            <label for="inputPhone" class="form-label f-label"
               >Phone Number*</label
             >
             <input
@@ -108,7 +106,7 @@
             />
           </div>
           <div class="col-12 col-md-6 mb-3">
-            <label for="inputEnquiry" class="form-label contact-text"
+            <label for="inputEnquiry" class="form-label f-label"
               >Purpose of Enquiry</label
             >
             <select
@@ -126,21 +124,16 @@
           </div>
 
           <div class="col-12">
-            <label for="message" class="form-label contact-text">Message</label>
+            <label for="message" class="form-label f-label">Message</label>
             <textarea
-              class="contact-msg-box rounded-0 border-0 w-100"
+              class="contact-msg-box"
               id="message"
               rows="4"
               placeholder="Your message here..."
             ></textarea>
           </div>
           <div class="col-12 text-center mt-5">
-            <button
-              type="submit"
-              class="rounded-0 border-0 sign-in-btn btn-primary"
-            >
-              Submit
-            </button>
+            <button type="submit" class="red-btn">Submit</button>
           </div>
         </div>
       </form>
