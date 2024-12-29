@@ -29,9 +29,9 @@ export class ContactUsComponent {
   ];
 
   socialMedia = [
-    { icon: 'facebook.png', path: '' },
+    { icon: 'facebook-contact.png', path: '' },
     { icon: 'whatsapp.png', path: '' },
-    { icon: 'instagram.png', path: '' },
+    { icon: 'instagram-contact.png', path: '' },
     { icon: 'linkdin.png', path: '' },
   ];
 }
