@@ -11,9 +11,14 @@ import { RouterModule } from '@angular/router';
 })
 export class HeaderComponent {
   isScrolled = false;
+  isNavOpen = false;
 
   @HostListener('window:scroll', [])
   onWindowScroll(): void {
     this.isScrolled = window.scrollY > 220;
+  }
+
+  toggle(): void {
+    this.isNavOpen = !this.isNavOpen;
   }
 }
