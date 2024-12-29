@@ -1,9 +1,9 @@
-<div class="container contact-container">
+<div class="container contact-container bg">
   <h1 class="contact-us-heading">CONTACT US</h1>
 
   <div class="row align-items-center mt-5 mt-lg-0">
     <div class="col-12 col-lg-6 text-center text-lg-start">
-      <div class="bg">
+      <div>
         <div
           [ngClass]="{
             'mb-3 mb-lg-0': contact.label === 'Social Media',
@@ -28,9 +28,11 @@
           <div class="col-lg-3"></div>
           <div class="col-12 col-lg-5">
             <div class="row">
-              <div class="col-3" *ngFor="let social of socialMedia">
-                <img class="img-fluid" [src]="social.icon" alt="" />
+              <div class="col-2 col-lg-12"></div>
+              <div class="col-2 col-lg-3" *ngFor="let social of socialMedia">
+                <img class="img-fluid social-icon" [src]="social.icon" alt="" />
               </div>
+              <div class="col-2"></div>
             </div>
           </div>
         </div>
