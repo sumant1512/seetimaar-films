@@ -3,32 +3,34 @@
 
   <div class="row align-items-center mt-5 mt-lg-0">
     <div class="col-12 col-lg-6 text-center text-lg-start">
-      <div
-        [ngClass]="{
-          'mb-3 mb-lg-0': contact.label === 'Social Media',
-          'mb-5': contact.label !== 'Social Media'
-        }"
-        *ngFor="let contact of contactDetails"
-        class="row align-items-center"
-      >
+      <div class="bg">
         <div
-          class="col-12 col-lg-3 d-flex justify-content-center justify-content-lg-end mb-3 mb-lg-0"
+          [ngClass]="{
+            'mb-3 mb-lg-0': contact.label === 'Social Media',
+            'mb-5': contact.label !== 'Social Media'
+          }"
+          *ngFor="let contact of contactDetails"
+          class="row align-items-center"
         >
-          <div class="icon">
-            <img class="img-fluid" [src]="contact.icon" alt="Phone" />
+          <div
+            class="col-12 col-lg-3 d-flex justify-content-center justify-content-lg-end mb-3 mb-lg-0"
+          >
+            <div class="icon">
+              <img class="img-fluid" [src]="contact.icon" alt="Phone" />
+            </div>
+          </div>
+          <div class="col-12 col-lg-9 ps-lg-4">
+            <h4 class="label">{{ contact.label }}</h4>
+            <a class="value" [href]="contact.href">{{ contact.value }}</a>
           </div>
         </div>
-        <div class="col-12 col-lg-9 ps-lg-4">
-          <h4 class="label">{{ contact.label }}</h4>
-          <a class="value" [href]="contact.href">{{ contact.value }}</a>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-3"></div>
-        <div class="col-12 col-lg-5">
-          <div class="row">
-            <div class="col-3" *ngFor="let social of socialMedia">
-              <img class="img-fluid" [src]="social.icon" alt="" />
+        <div class="row">
+          <div class="col-lg-3"></div>
+          <div class="col-12 col-lg-5">
+            <div class="row">
+              <div class="col-3" *ngFor="let social of socialMedia">
+                <img class="img-fluid" [src]="social.icon" alt="" />
+              </div>
             </div>
           </div>
         </div>
