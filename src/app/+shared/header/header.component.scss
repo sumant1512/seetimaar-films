@@ -1,13 +1,18 @@
 @import "mq";
 
 .header {
-  background: black;
+  background: transparent;
   color: #a3a3a3;
   width: 100%;
   position: fixed;
   transition: all 0.25s ease-in-out;
   padding: 20px 20px;
   z-index: 9;
+}
+
+.scrolled {
+  background-color: black;
+  transition: background-color 0.2s ease;
 }
 
 .contact-btn {
@@ -20,11 +25,6 @@
 
 .container-large {
   padding-left: 132px;
-}
-
-.header[data-status="scrolled"] {
-  top: 0;
-  width: 100%;
 }
 
 .header .logo {

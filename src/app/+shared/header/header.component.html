@@ -1,6 +1,8 @@
 <div
   class="header d-block d-lg-none"
-  [attr.data-status]="isScrolled ? 'scrolled' : null"
+  [ngClass]="{
+    scrolled: isScrolled
+  }"
 >
   <div class="container-fluid">
     <div class="d-flex justify-content-between">
@@ -40,8 +42,10 @@
 </div>
 
 <div
+  [ngClass]="{
+    scrolled: isScrolled
+  }"
   class="header d-none d-lg-block"
-  [attr.data-status]="isScrolled ? 'scrolled' : null"
 >
   <div class="d-flex align-items-center container-large">
     <img class="logo" [routerLink]="'/'" src="logo.png" alt="Logo" />
