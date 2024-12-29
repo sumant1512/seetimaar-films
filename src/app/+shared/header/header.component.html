@@ -1,9 +1,4 @@
-<div
-  class="header d-block d-lg-none"
-  [ngClass]="{
-    scrolled: isScrolled || isNavOpen
-  }"
->
+<div class="header d-block d-lg-none">
   <div class="container-fluid">
     <div class="d-flex justify-content-between">
       <img class="logo" [routerLink]="'/'" src="logo.png" alt="Logo" />
@@ -34,7 +29,7 @@
           <a class="nav-link" routerLink="/blogs">Blogs</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/about">About Usss</a>
+          <a class="nav-link" routerLink="/about">About Us</a>
         </li>
       </ul>
       <Button class="contact-btn" routerLink="/contact">Contact Us</Button>
@@ -42,12 +37,7 @@
   </div>
 </div>
 
-<div
-  [ngClass]="{
-    scrolled: isScrolled
-  }"
-  class="header d-none d-lg-block"
->
+<div class="header d-none d-lg-block">
   <div class="d-flex align-items-center container-large">
     <img class="logo" [routerLink]="'/'" src="logo.png" alt="Logo" />
     <div

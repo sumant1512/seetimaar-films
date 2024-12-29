@@ -15,7 +15,8 @@ export class HeaderComponent {
 
   @HostListener('window:scroll', [])
   onWindowScroll(): void {
-    this.isScrolled = window.scrollY > 220;
+    console.log(window.innerWidth, window.scrollY);
+    this.isScrolled = window.scrollY > (window.innerWidth < 650 ? 126 : 160);
   }
 
   toggle(): void {
