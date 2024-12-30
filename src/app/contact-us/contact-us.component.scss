@@ -1,7 +1,11 @@
 @import "mq";
 
 .contact-container {
-  padding-top: 120px;
+  padding-top: 160px;
+
+  @include mq(md) {
+    padding-top: 120px;
+  }
 
   .contact-us-heading {
     font-family: Cinzel;

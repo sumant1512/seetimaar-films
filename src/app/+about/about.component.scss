@@ -1,5 +1,11 @@
+@import "mq";
+
 .about-container {
-  padding-top: 120px;
+  padding-top: 160px;
+
+  @include mq(md) {
+    padding-top: 120px;
+  }
 
   .heading {
     font-family: Cinzel;

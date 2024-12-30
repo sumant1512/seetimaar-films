@@ -1,7 +1,11 @@
 @import "mq";
 
 .project-container {
-  padding-top: 120px;
+  padding-top: 160px;
+
+  @include mq(md) {
+    padding-top: 120px;
+  }
 
   .banner {
     position: relative;
