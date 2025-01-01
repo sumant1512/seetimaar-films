@@ -9,7 +9,7 @@
         <div class="card p-3 blog-card rounded-0">
           <img [src]="blog.img" class="card-img-top rounded-0" alt="..." />
           <div class="card-body">
-            <h5 class="blog-title">Seetimaar Films: Lights, Camera, Seeti!</h5>
+            <h6 class="blog-title">{{ blog.name }}</h6>
             <div class="blog-dscription mb-4">
               <div *ngIf="blog.description.length > 100; else fullText">
                 {{ blog.description.substring(0, 100) }}...

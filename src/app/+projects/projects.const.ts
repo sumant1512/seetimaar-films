@@ -18,17 +18,10 @@ export const Projects = [
     relatedBlogs: [
       {
         id: 1,
-        name: 'Seetimaar Films: Lights, Camera, Seeti!',
+        name: 'Exploring "The Story of Guns Valley": A Tale of Crime, Choices, and Redemption',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+          'At its core, The Story of Guns Valley is more than just an action-packed drama—it’s an exploration of human behavior, societal influences, and the psychological intricacies that push individuals towards crime. Set in the fictional Guns Valley, this web series dives into the minds of those who choose the path of violence, seeking to uncover the triggers that lead them to pick up arms. By intertwining thrilling storytelling with thought-provoking commentary, it aims to create an immersive cinematic experience that not only entertains but educates and challenges societal norms.',
         img: 'b1.png',
-      },
-      {
-        id: 2,
-        name: 'Seetimaar Films: Lights, Camera, Seeti!',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        img: 'b2.png',
       },
     ],
   },
@@ -41,5 +34,19 @@ export const Projects = [
       'After a devastating love marriage collapse, a young woman from Urban place, lost in despair, encounters a mysterious saint who offers her hope: to mend her broken life, she must journey to the highest snowy peak of the Himalayas and capture a ghost. What starts as a desperate quest for reconciliation transforms into a profound spiritual journey, teaching her the true meaning of love, healing, and self-discovery.',
     trailor: 'veena.mp4',
     gif: 'veena.mp4',
+    director: {
+      name: 'Chitransh Bhaskar',
+      img: 'chitransh.png',
+      knownFor: 'The Story of Guns Valley (2023)',
+    },
+    relatedBlogs: [
+      {
+        id: 2,
+        name: "Veena's Journey: A Tale of Love, Loss, and Redemption",
+        description:
+          "Veena's Journey is a poignant exploration of heartbreak and healing, wrapped in the mysticism of the Himalayas. Following the collapse of her love marriage, Veena, an urban woman drowning in despair, finds herself on an extraordinary path to redemption. Guided by a mysterious saint, she is tasked with an impossible mission: to scale the snow-clad peaks of the Himalayas and capture a ghost.",
+        img: 'b2.png',
+      },
+    ],
   },
 ];

@@ -27,7 +27,7 @@ export class ProjectsComponent {
 
   selectProject(project: any): void {
     this.selectedProject = project;
-    console.log(this.selectedProject);
+    window.scrollTo(0, 0);
   }
 
   getFilteredProjects(): any[] {
