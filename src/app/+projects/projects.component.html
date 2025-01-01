@@ -1,27 +1,54 @@
 <div class="container project-container">
   <!-- Banner Section -->
   <div class="banner">
-    <app-video [videoSrc]="selectedProject.video" [width]="'100%'"></app-video>
+    <app-video [videoSrc]="selectedProject.gif" [width]="'100%'"></app-video>
     <div class="project-details">
       <div class="d-flex align-items-center mb-2">
-        <h1 class="name">{{ selectedProject.name }}</h1>
+        <h2 class="name">{{ selectedProject.name }}</h2>
         <button *ngIf="selectedProject.isLatest" class="b-new px-2 px-md-3">
           New
         </button>
       </div>
       <p class="description">
-        {{ selectedProject.oneLiner }}
+        {{ selectedProject.synopsis }}
       </p>
     </div>
   </div>
 
-  <!-- <video width="320" height="240" controls>
-    <source src="veena.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video> -->
+  <!-- cast and crew section -->
+  <section *ngIf="selectedProject.castMembers?.length">
+    <h5 class="projects-heading mb-3 mt-3">Cast and Crew</h5>
+    <div class="row text-center">
+      <div
+        *ngFor="let cast of selectedProject.castMembers"
+        class="col-4 col-md-3 col-lg-2"
+      >
+        <img class="img-fluid" [src]="cast.img" [alt]="cast.name" />
+        <h6 class="mt-3 gray-1">{{ cast.name }}</h6>
+      </div>
+    </div>
+  </section>
+
+  <div *ngIf="selectedProject.castMembers?.length" class="separator mt-3"></div>
+
+  <!-- Director section -->
+
+  <section *ngIf="selectedProject.director?.name">
+    <div class="row align-items-center">
+      <div class="col-3 col-md-2">
+        <img class="img-fluid" [src]="selectedProject.director?.img" alt="" />
+      </div>
+      <div class="col-9 col-md-10">
+        <h6 class="projects-heading">{{ selectedProject.director?.name }}</h6>
+        <p class="gray-1">{{ selectedProject.director?.knownFor }}</p>
+      </div>
+    </div>
+  </section>
+
+  <div *ngIf="selectedProject.director?.name" class="separator mt-3"></div>
 
   <!-- Projects Section -->
-  <h4 class="projects-heading mb-3 mt-5">Related Projects</h4>
+  <h5 class="projects-heading mb-3 mt-5">Projects</h5>
   <div class="project-cards">
     <div
       class="story-card mb-4 cursor-pointer"
@@ -29,16 +56,18 @@
       (click)="selectProject(project)"
     >
       <app-video-gif-player
-        [videoSrc]="project.video"
+        [videoSrc]="project.gif"
         [width]="'100%'"
       ></app-video-gif-player>
       <h4 class="my-3 story-heading">{{ project.name }}</h4>
-      <div *ngIf="project.oneLiner.length > 100; else fullText">
+      <div class="gray-2" *ngIf="project.oneLiner.length > 100; else fullText">
         {{ project.oneLiner.substring(0, 100) }}...
       </div>
-      <ng-template #fullText>{{ project.oneLiner }}</ng-template>
+      <ng-template class="gray-2" #fullText>{{ project.oneLiner }}</ng-template>
     </div>
   </div>
 
-  <app-blog-section></app-blog-section>
+  <div *ngIf="selectedProject.relatedBlogs?.length">
+    <app-blog-section [blogs]="selectedProject.relatedBlogs"></app-blog-section>
+  </div>
 </div>

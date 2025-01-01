@@ -10,7 +10,7 @@ export const AboutData = [
       'Seetimaar Films isn’t just a production house—it’s his mission to turn stories into spectacular experiences. So grab your popcorn, because Chitransh Bhaskar’s next adventure is bound to be a blockbuster.',
     ],
     isReadBtnActive: true,
-    img: 'chitransh.jpeg',
+    img: 'chitransh.png',
     imgAlt: 'Chitransh Bhaskar',
   },
 ];

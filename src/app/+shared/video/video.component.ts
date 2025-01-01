@@ -17,7 +17,7 @@ import {
 export class VideoComponent implements AfterViewInit {
   @Input() videoSrc!: string;
   @Input() width: string = '600px';
-  @Input() height!: string;
+  @Input() height: string = '510px';
   @ViewChild('videoPlayer') videoPlayer!: ElementRef;
 
   ngAfterViewInit() {
