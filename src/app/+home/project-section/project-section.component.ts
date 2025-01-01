@@ -19,7 +19,7 @@ export class ProjectSectionComponent {
         'A gripping tale of crime, survival, and redemption, exploring the human stories behind the violence in a lawless valley.',
       synopsis:
         'In a lawless valley gripped by violence, The Story of Guns Valley delves into the lives of those entangled in a world of crime and chaos. Exploring the societal, psychological, and emotional factors that lead individuals to pick up arms, the series unveils their struggles, motivations, and consequences. Through gripping narratives and multi-dimensional characters, it highlights the harsh realities of anger, betrayal, and survival, while offering glimpses of redemption and hope. This intense and thought-provoking saga sheds light on the choices that define lives and the delicate line between justice and vengeance.',
-      video: 'veena.mp4',
+      video: 'guns_valley.mp4',
     },
     {
       id: 2,

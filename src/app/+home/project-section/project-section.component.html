@@ -10,6 +10,7 @@
         <app-video-gif-player
           [videoSrc]="project.video"
           [width]="'100%'"
+          [height]="'378px'"
         ></app-video-gif-player>
         <h4 class="my-3 story-heading">{{ project.name }}</h4>
         <div *ngIf="project.oneLiner.length > 150; else fullText">

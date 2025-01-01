@@ -27,6 +27,7 @@ export class ProjectsComponent {
 
   selectProject(project: any): void {
     this.selectedProject = project;
+    console.log(this.selectedProject);
   }
 
   getFilteredProjects(): any[] {

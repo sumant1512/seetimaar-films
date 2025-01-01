@@ -1,7 +1,10 @@
 <div class="container project-container">
   <!-- Banner Section -->
   <div class="banner">
-    <app-video [videoSrc]="selectedProject.gif" [width]="'100%'"></app-video>
+    <app-video
+      [videoSrc]="selectedProject.trailor"
+      [width]="'100%'"
+    ></app-video>
     <div class="project-details">
       <div class="d-flex align-items-center mb-2">
         <h2 class="name">{{ selectedProject.name }}</h2>

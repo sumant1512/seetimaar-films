@@ -29,8 +29,17 @@
           <div class="col-12 col-lg-5">
             <div class="row mb-5">
               <div class="col-2 col-lg-12"></div>
-              <div class="col-2 col-lg-3" *ngFor="let social of socialMedia">
-                <img class="img-fluid social-icon" [src]="social.icon" alt="" />
+              <div
+                class="col-2 col-lg-3 cursor-pointer"
+                *ngFor="let social of socialMedia"
+              >
+                <a [href]="social.path" target="_blank">
+                  <img
+                    class="img-fluid social-icon"
+                    [src]="social.icon"
+                    [alt]="social.icon"
+                  />
+                </a>
               </div>
               <div class="col-2"></div>
             </div>
