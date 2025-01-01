@@ -1,5 +1,24 @@
 <section>
   <div class="container mt-0 mt-md-5 mt-lg-0 mb-4 mb-md-5 pb-0 pb-lg-3">
-    <app-about-card [aboutData]="aboutData"></app-about-card>
+    <!-- <app-about-card [aboutData]="aboutData"></app-about-card> -->
+    <div class="row align-items-center">
+      <div class="col-12 col-md-4">
+        <img class="img-fluid" [src]="aboutData.img" [alt]="aboutData.imgAlt" />
+      </div>
+      <div class="col-12 col-md-8 about-card">
+        <h1 class="name">{{ aboutData.name }}</h1>
+        <p class="intro">Managing Director & Founder of Seetimaar Films</p>
+        <p *ngFor="let bio of aboutData.bio" class="bio">
+          {{ bio }}
+        </p>
+        <button
+          class="red-btn mt-4"
+          *ngIf="aboutData.isReadBtnActive"
+          [routerLink]="'/about'"
+        >
+          Read More
+        </button>
+      </div>
+    </div>
   </div>
 </section>

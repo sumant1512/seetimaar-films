@@ -1,0 +1,23 @@
+@import "mq";
+
+.about-card {
+  .name {
+    font-family: Cinzel;
+    font-size: 40px;
+    font-weight: 700;
+  }
+  .intro {
+    color: red;
+  }
+  .bio {
+    font-family: Poppins;
+    font-weight: 300;
+    font-size: 14px;
+  }
+  padding: 54px 24px 54px 24px;
+  text-align: center;
+  @include mq(md) {
+    padding: 0px 8px 0px 54px;
+    text-align: left;
+  }
+}

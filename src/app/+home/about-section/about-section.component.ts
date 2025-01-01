@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { AboutCardComponent } from '../../+shared/about-card/about-card.component';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-about-section',
   standalone: true,
-  imports: [AboutCardComponent],
+  imports: [CommonModule, RouterModule],
   templateUrl: './about-section.component.html',
   styleUrl: './about-section.component.scss',
 })
@@ -12,9 +14,12 @@ export class AboutSectionComponent {
   aboutData = {
     name: 'Chitransh Bhaskar',
     bio: [
-      'Meet Chitransh Bhaskar: writer, director, and the mastermind behind Seetimaar Films—a production house with a vision so grand, even cinema itself gets inspired. Here, we don’t just make movies; we create experiences. We want you to sit back, enjoy every second, and leave with memories (and maybe a few emotional scars). Sometimes, we’ll teach you about life. Other times, you’ll be biting your nails in suspense. And yes, there will be moments when we’ll have you sobbing into your popcorn.',
-      'Seetimaar Films isn’t just ambitious; it’s a mission. A mission to give writers the spotlight they deserve, actors the stage to shine, and everyone working behind the camera the standing ovation they’ve always earned. Because let’s face it—without these unsung heroes, even the best script would just be a Word document.',
-      'We’re also a sanctuary for dreamers. Got an idea that can shake the world (or at least make people remember it till the end of time)? We’re all ears. Whether it’s epic, emotional, or utterly eccentric, we’re ready to bring it to life. Because at Seetimaar Films, every great story deserves its moment on the big screen.',
+      'Meet Chitransh Bhaskar: The Seeti-Maar Storyteller',
+      'Who is Chitransh Bhaskar?',
+      'Only the writer, director, and dream-weaver behind Seetimaar Films—a man who doesn’t just create movies; he creates whistle-worthy moments. From scripting soul-stirring tales to crafting jaw-dropping visuals, Chitransh is the full cinematic package: a storyteller, an innovator, and your go-to guy for unforgettable cinema.',
+      'With award-winning films (and a few sleepless nights) under his belt, Chitransh juggles animation, VFX, and scriptwriting like they’re part of his DNA. His secret? A cup of coffee in one hand and boundless creativity in the other.',
+      'When he’s not dreaming up plots that make you laugh, cry, or whistle till your lungs hurt, he’s busy giving Indian cinema a much-needed shake-up.',
+      'Seetimaar Films isn’t just a production house—it’s his mission to turn stories into spectacular experiences. So grab your popcorn, because Chitransh Bhaskar’s next adventure is bound to be a blockbuster.',
     ],
     isReadBtnActive: true,
     img: 'chitransh.jpeg',
