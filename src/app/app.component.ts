@@ -21,6 +21,6 @@ import { HeaderComponent } from './+shared/header/header.component';
 export class AppComponent {
   @HostListener('contextmenu', ['$event'])
   onRightClick(event: any) {
-    // event.preventDefault();
+    event.preventDefault();
   }
 }
