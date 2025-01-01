@@ -39,11 +39,11 @@
   <section *ngIf="selectedProject.director?.name">
     <div class="row align-items-center">
       <div class="col-3 col-md-2">
-        <img class="img-fluid" [src]="selectedProject.director?.img" alt="" />
+        <img class="img-fluid" [src]="selectedProject.director.img" alt="" />
       </div>
       <div class="col-9 col-md-10">
-        <h6 class="projects-heading">{{ selectedProject.director?.name }}</h6>
-        <p class="gray-1">{{ selectedProject.director?.knownFor }}</p>
+        <h6 class="projects-heading">{{ selectedProject.director.name }}</h6>
+        <p class="gray-1">{{ selectedProject.director.knownFor }}</p>
       </div>
     </div>
   </section>
