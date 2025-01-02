@@ -26,6 +26,7 @@ export class ContactUsComponent {
     {
       label: 'Social Media',
       icon: 'social-media.png',
+      href: 'https://www.instagram.com/seetimaarfilms/profilecard/?igsh=dW1neDc2Nm5ybXR4',
     },
   ];
 
