@@ -13,6 +13,12 @@ export class HeaderComponent {
   isScrolled = false;
   isNavOpen = false;
 
+  menuItems = [
+    { label: 'Home', path: '/' },
+    { label: 'Projects', path: '/projects' },
+    { label: 'About Us', path: '/about' },
+  ];
+
   @HostListener('window:scroll', [])
   onWindowScroll(): void {
     this.isScrolled = window.scrollY > 40;
