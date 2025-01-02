@@ -38,7 +38,16 @@
           <a class="nav-link" [routerLink]="menu.path">{{ menu.label }}</a>
         </li>
       </ul>
-      <Button class="contact-btn" routerLink="/contact">Contact Us</Button>
+      <Button
+        class="contact-btn"
+        routerLink="/contact"
+        data-bs-toggle="collapse"
+        data-bs-target="#headerNav"
+        aria-controls="headerNav"
+        aria-expanded="false"
+        (click)="toggle()"
+        >Contact Us</Button
+      >
     </div>
   </div>
 </div>
