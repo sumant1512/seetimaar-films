@@ -38,7 +38,10 @@ export class ContactUsComponent {
       icon: 'facebook.png',
       path: 'https://www.facebook.com/share/19sVra56HL/',
     },
-    { icon: 'linkdin.png', path: '' },
-    { icon: 'whatsapp.png', path: 'https://wa.me/9993035739' },
+    {
+      icon: 'linkdin.png',
+      path: 'https://www.linkedin.com/company/106111090/admin/dashboard/',
+    },
+    { icon: 'whatsapp.png', path: 'https://wa.me/+919993035739' },
   ];
 }

@@ -56,16 +56,11 @@
           class="d-flex justify-content-center justify-content-md-start gap-3"
         >
           <a
-            href="https://www.instagram.com/seetimaarfilms/profilecard/?igsh=dW1neDc2Nm5ybXR4"
+            *ngFor="let social of socialMedia"
+            [href]="social.path"
             target="_blank"
           >
-            <img class="footer-icon" src="instagram.png" alt="Instagram" />
-          </a>
-          <a href="https://www.facebook.com/share/19sVra56HL/" target="_blank">
-            <img class="footer-icon" src="facebook.png" alt="Facebook" />
-          </a>
-          <a href="" target="_blank">
-            <img class="footer-icon" src="linkdin.png" alt="Twitter" />
+            <img class="footer-icon" [src]="social.icon" [alt]="social.icon" />
           </a>
         </div>
       </div>
