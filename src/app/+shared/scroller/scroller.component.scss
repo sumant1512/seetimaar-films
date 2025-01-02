@@ -1,8 +1,10 @@
+@import "mq";
+
 #scrollToTop {
   z-index: 9;
   position: fixed;
   bottom: 3rem;
-  right: 3rem;
+  right: 1rem;
   background-color: #ce0000;
   border-radius: 100%;
   width: 60px;
@@ -22,6 +24,9 @@
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+  }
+  @include mq(md) {
+    right: 2rem;
   }
 }
 
