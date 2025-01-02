@@ -12,17 +12,39 @@ export class VideoGifPlayerComponent {
   @Input() videoSrc!: string;
   @Input() width: string = '600px';
   @Input() height!: string;
-  @ViewChild('videoPlayer') videoPlayer!: ElementRef;
+  @ViewChild('videoPlayer') videoElement!: ElementRef<HTMLVideoElement>;
 
-  playVideo(): void {
-    const videoElement = this.videoPlayer.nativeElement;
-    videoElement.muted = true;
-    videoElement.play();
+  private observer!: IntersectionObserver;
+
+  ngAfterViewInit(): void {
+    this.initIntersectionObserver();
+    if (this.videoElement) {
+      this.observer.observe(this.videoElement.nativeElement);
+    }
   }
 
-  pauseVideo(): void {
-    const videoElement = this.videoPlayer.nativeElement;
-    videoElement.muted = true;
-    videoElement.pause();
+  private initIntersectionObserver(): void {
+    this.observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const video = entry.target as HTMLVideoElement;
+          if (entry.isIntersecting) {
+            video.muted = true;
+            video.play();
+          } else {
+            video.muted = true;
+            video.pause();
+            video.currentTime = 0;
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+  }
+
+  ngOnDestroy(): void {
+    if (this.observer) {
+      this.observer.disconnect();
+    }
   }
 }
