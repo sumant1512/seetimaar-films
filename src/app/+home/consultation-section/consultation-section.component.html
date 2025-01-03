@@ -111,7 +111,13 @@
             ></textarea>
           </div>
           <div class="col-12 text-center mt-5">
-            <button type="submit" class="red-btn" (click)="sendEmail()">
+            <button
+              type="submit"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              class="red-btn"
+              (click)="sendEmail()"
+            >
               Submit
             </button>
           </div>
