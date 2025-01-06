@@ -11,4 +11,5 @@ import { RouterModule } from '@angular/router';
 })
 export class BlogSectionComponent {
   @Input() blogs!: any;
+  @Input() projectId!: number;
 }

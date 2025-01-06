@@ -1,6 +1,15 @@
-.card-columns {
-  column-count: 3;
-  column-gap: 1.25rem;
-  orphans: 1;
-  widows: 1;
+@import "mq";
+
+.blog-container {
+  padding-top: 160px;
+  font-family: Poppins;
+
+  @include mq(md) {
+    padding-top: 120px;
+  }
+
+  p,
+  li {
+    font-size: 15px;
+  }
 }

@@ -71,6 +71,9 @@
   </div>
 
   <div *ngIf="selectedProject.relatedBlogs?.length">
-    <app-blog-section [blogs]="selectedProject.relatedBlogs"></app-blog-section>
+    <app-blog-section
+      [blogs]="selectedProject.relatedBlogs"
+      [projectId]="selectedProject.id"
+    ></app-blog-section>
   </div>
 </div>

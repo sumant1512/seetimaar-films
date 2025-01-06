@@ -17,21 +17,9 @@ export const routes: Routes = [
       import('./+projects/projects.component').then((m) => m.ProjectsComponent),
   },
   {
-    path: 'projects/:id',
-    loadComponent: () =>
-      import('./+projects/project/project.component').then(
-        (m) => m.ProjectComponent
-      ),
-  },
-  {
     path: 'blogs',
     loadComponent: () =>
       import('./+blogs/blogs.component').then((m) => m.BlogsComponent),
-  },
-  {
-    path: 'blogs/:id',
-    loadComponent: () =>
-      import('./+blogs/blog/blog.component').then((m) => m.BlogComponent),
   },
   {
     path: 'contact',

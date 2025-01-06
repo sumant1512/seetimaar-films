@@ -16,7 +16,11 @@
               </div>
               <ng-template #fullText> {{ blog.description }} </ng-template>
             </div>
-            <button [routerLink]="'../blogs/' + blog.id" class="red-btn">
+            <button
+              [routerLink]="'../blogs/'"
+              [queryParams]="{ blogId: blog.id, projectId: projectId }"
+              class="red-btn"
+            >
               View More
             </button>
           </div>
