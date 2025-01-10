@@ -17,9 +17,9 @@ import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
   styleUrl: './consultation-section.component.scss',
 })
 export class ConsultationSectionComponent {
-  serviceID = 'service_5vbppd5';
-  templateID = 'template_q1tnor7';
-  publicKey = 'SxqZlqYGgxgAgw6he';
+  serviceID = 'service_5phxcel';
+  templateID = 'template_udmqf7g';
+  publicKey = 'PN0B7bXnT1dwSZ6hk';
   consultationForm = new FormGroup({
     name: new FormControl('', [Validators.required]),
     email: new FormControl(''),
