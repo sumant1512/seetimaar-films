@@ -19,9 +19,9 @@ export class ContactUsComponent {
     },
     {
       label: 'Mail Us',
-      value: 'chitransh@seetimaarfilms.com',
+      value: 'seetimaarfilms21@gmail.com',
       icon: 'email.png',
-      href: 'mailto:chitransh@seetimaarfilms.com',
+      href: 'mailto:seetimaarfilms21@gmail.com',
     },
     {
       label: 'Social Media',
